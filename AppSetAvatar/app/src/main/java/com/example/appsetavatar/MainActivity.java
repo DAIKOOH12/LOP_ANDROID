@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -48,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
             Uri selectedImageUri = data.getData();
             String selectedImagePath = "";
             selectedImagePath = getPathFromUri(selectedImageUri);
-            imgAva.setImageURI(selectedImageUri);
+            Bitmap bImage= BitmapFactory.decodeFile(selectedImagePath);
+            imgAva.setImageBitmap(bImage);
         }
     }
 

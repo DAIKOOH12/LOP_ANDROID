@@ -2,25 +2,27 @@ package com.example.btvn_customlistview;
 
 import android.net.Uri;
 
-public class Account {
-    private Uri uriImg;
+import java.io.Serializable;
+
+public class Account implements Serializable {
+    private String pathImg;
     private String sName;
     private String sPhone;
-    private String sEmai;
+    private String sEmail;
 
-    public Account(Uri uriImg, String sName, String sPhone, String sEmai) {
-        this.uriImg = uriImg;
+    public Account(String pathImg, String sName, String sPhone, String sEmail) {
+        this.pathImg = pathImg;
         this.sName = sName;
         this.sPhone = sPhone;
-        this.sEmai = sEmai;
+        this.sEmail = sEmail;
     }
 
-    public Uri getUriImg() {
-        return uriImg;
+    public String getPathImg() {
+        return pathImg;
     }
 
-    public void setUriImg(Uri uriImg) {
-        this.uriImg = uriImg;
+    public void setPathImg(String pathImg) {
+        this.pathImg = pathImg;
     }
 
     public String getsName() {
@@ -39,11 +41,11 @@ public class Account {
         this.sPhone = sPhone;
     }
 
-    public String getsEmai() {
-        return sEmai;
+    public String getsEmail() {
+        return sEmail;
     }
 
-    public void setsEmai(String sEmai) {
-        this.sEmai = sEmai;
+    public void setsEmail(String sEmail) {
+        this.sEmail = sEmail;
     }
 }
