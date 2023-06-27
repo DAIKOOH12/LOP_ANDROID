@@ -10,6 +10,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -85,7 +86,9 @@ public class SettingAccount extends AppCompatActivity implements Serializable {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==PICK_IMAGE && requestCode!=RESULT_CANCELED && data!=null){
             Uri uri=data.getData();
+//            Toast.makeText(this, uri.toString(), Toast.LENGTH_SHORT).show();
             path_image=getPathFromUri(uri);
+            Toast.makeText(this, path_image, Toast.LENGTH_SHORT).show();
             Bitmap bImage= BitmapFactory.decodeFile(path_image);
             imgAva.setImageBitmap(bImage);
         }

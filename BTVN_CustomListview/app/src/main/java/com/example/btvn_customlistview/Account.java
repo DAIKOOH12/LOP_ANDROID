@@ -8,8 +8,8 @@ public class Account implements Serializable {
     private String pathImg;
     private String sName;
     private String sPhone;
-    private String sEmail;
 
+    private String sEmail;
     public Account(String pathImg, String sName, String sPhone, String sEmail) {
         this.pathImg = pathImg;
         this.sName = sName;
